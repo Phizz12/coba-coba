@@ -2,25 +2,21 @@
 
 const bil = document.getElementById("input-angka"); // ini jadi nilainya 'bil' atau .value()
 // bil.value()
-const show = document.body;
-const container = document.createElement('h3');
+const hasil = document.querySelector(".result")
 
 function send() {
   if (bil.value === "") {
     alert("please input the number!");
-
   } else {
-    const sisa = bil.value % 2;
+    hasil.style.display = "block";
 
-    if (sisa != 0) {
-      const status = container
-      status.innerText = "Bilangan Ganjil"; 
-      show.appendChild(status).style.color = "red";
-
-    } else if (sisa === 0) {
-      const status = container
-      status.innerText = "Bilangan Genap";
-      show.appendChild(status).style.color = "green";
+    if (bil.value % 2 != 0) {
+      
+      hasil.innerText = "Bilangan Ganjil";
+      hasil.style.color = "red";
+    } else {
+      hasil.innerText = "Bilangan Genap";
+      hasil.style.color = "green";
     }
   }
 }

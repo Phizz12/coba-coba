@@ -27,3 +27,8 @@ button {
 button:active{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
 }
+
+.result{
+  display: none;
+  font-size: 50px;
+}
