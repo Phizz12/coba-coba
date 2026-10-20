@@ -8,15 +8,10 @@ function send() {
   if (bil.value === "") {
     alert("please input the number!");
   } else {
-    hasil.style.display = "block";
+    hasil.style.display = "block"
+    const ganjil = bil.value % 2 != 0;
 
-    if (bil.value % 2 != 0) {
-      
-      hasil.innerText = "Bilangan Ganjil";
-      hasil.style.color = "red";
-    } else {
-      hasil.innerText = "Bilangan Genap";
-      hasil.style.color = "green";
-    }
+    hasil.innerText = ganjil ? "Bilangan Ganjil":"Bilangan Genap"
+    hasil.style.color = ganjil ? "red": "green"
   }
 }
