@@ -4,18 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="coba.css">
+    <link rel="stylesheet" href="coba.css" />
   </head>
   <body>
-    <h1 id="text">CEK PARITAS BILANGAN GENAP</h1>
-
-
-    <input id="input-angka" type="number" placeholder="masukkan angka">
-    <button onclick="send()">cek</button>
-    <h3 class="result"></h3>
-
-
+    <h1 id="text">CEK KELULUSAN MAHASISWA</h1>
+    <div class="tabel-kriteria">
+      <p>Kriteria penilaian:</p>
+      <ol>
+        <li>Bobot nilai ujian 1 = 35%</li>
+        <li>Bobot nilai ujian 2 = 35%</li>
+        <li>Bobot nilai ujian 3 = 30%</li>
+      </ol>
+      <p>Mahasiswa dinyatakan <span>lulus</span> jika total skor akhir ujian paling tidak 60</p>
+    </div>
     
+
+    <input
+      id="input-angka1"
+      type="number"
+      placeholder="masukkan skor ujian 1"
+    />
+    <input
+      id="input-angka2"
+      type="number"
+      placeholder="masukkan skor ujian 2"
+    />
+    <input
+      id="input-angka3"
+      type="number"
+      placeholder="masukkan skor ujian 3"
+    />
+
+    <button onclick="send()">cek</button>
+    <h3 class="status"></h3>
+    <p class="score"></p>
+
     <script src="coba.js"></script>
   </body>
 </html>

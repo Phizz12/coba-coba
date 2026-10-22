@@ -9,6 +9,7 @@ input {
   height: 50px;
   outline: none;
   text-align: center; 
+  margin: 5px;
   
 }
 
@@ -28,7 +29,27 @@ button:active{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
 }
 
-.result{
+.status{
   display: none;
   font-size: 50px;
+}
+
+.score {
+  display: none;
+}
+
+.tabel-kriteria ol {
+  list-style-position: inside; /* nomor ikut nempel ke teks */
+  display: inline-block;        /* biar lebar ol ngikutin konten */
+  text-align: left;             /* teks rata kiri relatif ke ol */
+  margin-top: 2px;
+}
+
+.tabel-kriteria {
+  text-align: center; /* ini yang nge-center si ol sebagai block */
+}
+
+span{
+  font-weight: bold;
+  color: green;
 }
