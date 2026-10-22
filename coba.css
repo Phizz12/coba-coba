@@ -36,6 +36,7 @@ button:active{
 
 .score {
   display: none;
+  font-size: 30px;
 }
 
 .tabel-kriteria ol {

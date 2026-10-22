@@ -1,4 +1,4 @@
-// menentukan bilangan bulat ganjil atau genap
+// menentukan kelulusan mahasiswa(minimal skor 60)
 
 const skor1 = document.getElementById("input-angka1"); // ini jadi nilainya 'skor1' atau .value
 const skor2 = document.getElementById("input-angka2"); // ini jadi nilainya 'skor2' atau .value
@@ -8,26 +8,18 @@ const hasil = document.querySelector(".status");
 const score = document.querySelector(".score")
 
 function send() {
-  if ([skor1, skor2, skor3].some(bil => bil.value === "")) {
+  if ([skor1, skor2, skor3].some((skor) => skor.value === "")) {
     alert("Masukkan semua skor anda!");
-
-  } else {
-    const nilaiAkhir1 = skor1.value * 0.35;
-    const nilaiAkhir2 = skor2.value * 0.35;
-    const nilaiAkhir3 = skor3.value * 0.30;
-    const jumlahSkor = nilaiAkhir1 + nilaiAkhir2 + nilaiAkhir3;
-
-    hasil.style.display = "block";
-    score.style.display = "block";
-
-    if (jumlahSkor >= 60) {
-      hasil.innerText = "SELAMAT ANDA LULUS";
-      hasil.style.color = "green";
-      score.innerText  = `Skor akhir Anda ${jumlahSkor}`;
-    } else {
-      hasil.innerText = "MAAF ANDA GAGAL";
-      hasil.style.color = "red";
-      score.innerText  = `Skor akhir Anda ${jumlahSkor}`;
-    }
+    return;
   }
+
+  const jumlahSkor = skor1.value * 0.35 + skor2.value * 0.35 + skor3.value * 0.30;
+  const lulus = jumlahSkor >= 60;
+
+  hasil.style.display = "block";
+  score.style.display = "block";
+
+  hasil.innerText = lulus ? "SELAMAT ANDA LULUS" : "MAAF ANDA GAGAL";
+  hasil.style.color = lulus ? "green" : "red";
+  score.innerText = `Skor akhir Anda ${jumlahSkor.toFixed(2)}`;
 }
