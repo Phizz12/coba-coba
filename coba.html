@@ -15,7 +15,7 @@
         <li>Bobot nilai ujian 2 = 35%</li>
         <li>Bobot nilai ujian 3 = 30%</li>
       </ol>
-      <p>Mahasiswa dinyatakan <span>lulus</span> jika total skor akhir ujian paling tidak 60</p>
+      <p>Mahasiswa dinyatakan <span>lulus</span> jika total skor akhir ujian paling tidak 75</p>
     </div>
     
 
@@ -23,16 +23,19 @@
       id="input-angka1"
       type="number"
       placeholder="masukkan skor ujian 1"
+      min="0" max="100"
     />
     <input
       id="input-angka2"
       type="number"
       placeholder="masukkan skor ujian 2"
+      min="0" max="100"
     />
     <input
       id="input-angka3"
       type="number"
       placeholder="masukkan skor ujian 3"
+      min="0" max="100"
     />
 
     <button onclick="send()">cek</button>
