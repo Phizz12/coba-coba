@@ -2,34 +2,56 @@ body {
   display: flex-box;
   text-align: center;
   justify-content: center;
+  font-family: monospace;
 }
+
+/* -------------------------- input-box section--------------------------- */
 
 input {
   width: 200px;
   height: 50px;
-  outline: none;
-  text-align: center; 
+  text-align: center;
   margin: 5px;
-  
+  border-radius: 8px;
+  border: solid 1px black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
+}
+
+input:focus{
+  outline: solid 1px blue;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  font-family: monospace;
+  color: rgba(128, 128, 128, 0.706);
+}
+
+.input-section{
+  padding: 20px;
 }
 
 button {
   width: 50px;
   height: 55px;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.398);;
+  border: none  ;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.398);
+  margin-left: 5px;
+  border-radius: 8px;
+  font-family: monospace;
 }
 
-button:active{
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
+button:active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
 }
 
-.status{
+/* -------------------------- input-box section--------------------------- */
+
+.status {
   display: none;
   font-size: 50px;
 }
@@ -41,8 +63,8 @@ button:active{
 
 .tabel-kriteria ol {
   list-style-position: inside; /* nomor ikut nempel ke teks */
-  display: inline-block;        /* biar lebar ol ngikutin konten */
-  text-align: left;             /* teks rata kiri relatif ke ol */
+  display: inline-block; /* biar lebar ol ngikutin konten */
+  text-align: left; /* teks rata kiri relatif ke ol */
   margin-top: 2px;
 }
 
@@ -50,7 +72,24 @@ button:active{
   text-align: center; /* ini yang nge-center si ol sebagai block */
 }
 
-span{
-  font-weight: bold;
+.keterangan {
+  margin:auto;
+  padding: 12px;
+  width: 600px;
+  background-color: #d8d8d899;
+  border-radius: 8px;
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.398);
+}
+
+span1 {
   color: green;
+  font-weight: bold;
+}
+span2 {
+  color: rgb(255, 200, 0);
+  font-weight: bold;
+}
+span3 {
+  color: red;
+  font-weight: bold;
 }

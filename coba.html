@@ -15,33 +15,53 @@
         <li>Bobot nilai ujian 2 = 35%</li>
         <li>Bobot nilai ujian 3 = 30%</li>
       </ol>
-      <p>Mahasiswa dinyatakan <span>lulus</span> jika total skor akhir ujian paling tidak 75</p>
+    </div>
+
+    <div class="input-section">
+      <input
+        id="input-angka1"
+        type="number"
+        placeholder="masukkan skor ujian 1"
+        min="0"
+        max="100"
+      />
+      <input
+        id="input-angka2"
+        type="number"
+        placeholder="masukkan skor ujian 2"
+        min="0"
+        max="100"
+      />
+      <input
+        id="input-angka3"
+        type="number"
+        placeholder="masukkan skor ujian 3"
+        min="0"
+        max="100"
+      />
+      <button onclick="send()">cek</button>
     </div>
     
 
-    <input
-      id="input-angka1"
-      type="number"
-      placeholder="masukkan skor ujian 1"
-      min="0" max="100"
-    />
-    <input
-      id="input-angka2"
-      type="number"
-      placeholder="masukkan skor ujian 2"
-      min="0" max="100"
-    />
-    <input
-      id="input-angka3"
-      type="number"
-      placeholder="masukkan skor ujian 3"
-      min="0" max="100"
-    />
+    <div class="keterangan">
+      <p>
+        Mahasiswa dinyatakan <span1>lulus</span1> jika total skor akhir ujian ≥
+        75
+      </p>
+      <p>
+        Mahasiswa dinyatakan <span2>remidial</span2> jika total skor akhir ujian
+        ≥ 55 dan < 75
+      </p>
+      <p>
+        Mahasiswa dinyatakan <span3>gagal</span3> jika total skor akhir ujian <
+        55
+      </p>
+    </div>
 
-    <button onclick="send()">cek</button>
     <h3 class="status"></h3>
     <h3 class="score"></h3>
 
-    <script src="coba.js"></script>
+    <script src="coba js/counter.js"></script>
+    <script src="coba js/validation.js"></script>
   </body>
 </html>
